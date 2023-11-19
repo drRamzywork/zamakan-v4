@@ -303,11 +303,6 @@ const GElements = () => {
           </div>
         </foreignObject>
       </g >
-
-
-
-
-
     </>
   )
 }

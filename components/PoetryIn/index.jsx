@@ -44,9 +44,9 @@ const PoetryIn = () => {
 
 
   return (
-    <section id='PoetryIn' className={styles.PoetryIn} style={...Effra.style}>
+    <section dir='rtl' id='PoetryIn' className={styles.PoetryIn} style={...Effra.style}>
       <Container sx={{ maxWidth: "1400px" }} maxWidth={false}>
-        <div className={styles.sec_container}>
+        <div className={styles.sec_container} >
 
           <div className={styles.text_container}>
             <div className={styles.sec_title}>
@@ -96,7 +96,7 @@ const PoetryIn = () => {
           </div>
 
         </div>
-        <SaudiMap activeLand={activeLand} />
+        <SaudiMap dir='ltr' activeLand={activeLand} />
 
 
 

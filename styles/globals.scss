@@ -176,7 +176,6 @@ body::-webkit-scrollbar-track {
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
-
   @media screen and (max-width: 992px) {
     flex-direction: column;
   }
@@ -254,19 +253,44 @@ body::-webkit-scrollbar-track {
 //     margin-bottom: 24px !important;
 //   }
 
-//   #svg1 {
-//     width: 100% !important;
-//     height: 100% !important;
-//   }
+#svg1 {
+  // width: 100% !important;
+
+  // height: 100% !important;
+}
 // }
 
-.react-transform-wrapper {
+.map-box {
   margin-top: -200px !important;
+  position: relative;
+  width: 100%;
+
+  overflow: hidden;
+  border: 1px solid red;
+
+  @media screen and (max-width: 450px) {
+    // margin-top: 24px !important
+    margin-top: 146px !important;
+    margin-bottom: 24px !important;
+
+    overflow: unset !important;
+    #svg1 {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) scale(0.5);
+    }
+  }
+}
+.react-transform-component {
+  // width: 100% !important;
+  // max-width: 100%;
 }
 
 @media screen and (max-width: 992px) {
   .react-transform-wrapper {
     width: 100% !important;
+    // margin-top: 24px !important;
     margin-top: 24px !important;
     margin-bottom: 24px !important;
   }
@@ -288,8 +312,8 @@ body::-webkit-scrollbar-track {
   transition: transform 0.5s, -webkit-transform 0.5s;
 }
 #svg1 {
-  max-width: 100% !important;
-  height: auto !important;
+  // max-width: 100% !important;
+  // height: auto !important;
 }
 .city-name {
   -webkit-transition: -webkit-transform 0.3s ease-in-out !important;
@@ -348,7 +372,7 @@ body::-webkit-scrollbar-track {
     transition: stroke 0.5s ease-in-out !important;
   }
   &:hover {
-    path {
+    path:not(.city-name svg path) {
       stroke-width: 2 !important;
       stroke: #ffffff !important;
     }
@@ -482,103 +506,77 @@ body::-webkit-scrollbar-track {
 }
 
 .land.activeLand:nth-child(1) {
-  @media screen and (min-width: 500px) {
-    -webkit-transform: scale(1.02) translate(-1%, -2%) !important;
-    -ms-transform: scale(1.02) translate(-1%, -2%) !important;
-    transform: scale(1.02) translate(-1%, -2%) !important;
-  }
+  -webkit-transform: scale(1.02) translate(-1%, -2%) !important;
+  -ms-transform: scale(1.02) translate(-1%, -2%) !important;
+  transform: scale(1.02) translate(-1%, -2%) !important;
 }
 .land.activeLand:nth-child(2) {
-  @media screen and (min-width: 500px) {
-    -webkit-transform: scale(1.02) translate(-1%, -2%) !important;
-    -ms-transform: scale(1.02) translate(-1%, -2%) !important;
-    transform: scale(1.02) translate(-1%, -2%) !important;
-  }
+  -webkit-transform: scale(1.02) translate(-1%, -2%) !important;
+  -ms-transform: scale(1.02) translate(-1%, -2%) !important;
+  transform: scale(1.02) translate(-1%, -2%) !important;
 }
 .land.activeLand:nth-child(3) {
-  @media screen and (min-width: 500px) {
-    -webkit-transform: scale(1.02) translate(-6px, -11px) !important;
-    -ms-transform: scale(1.02) translate(-6px, -11px) !important;
-    transform: scale(1.02) translate(-6px, -11px) !important;
-  }
+  -webkit-transform: scale(1.02) translate(-6px, -11px) !important;
+  -ms-transform: scale(1.02) translate(-6px, -11px) !important;
+  transform: scale(1.02) translate(-6px, -11px) !important;
 }
 .land.activeLand:nth-child(4) {
-  @media screen and (min-width: 500px) {
-    -webkit-transform: scale(1.02) translate(-5px, -11px) !important;
-    -ms-transform: scale(1.02) translate(-5px, -11px) !important;
-    transform: scale(1.02) translate(-5px, -11px) !important;
-  }
+  -webkit-transform: scale(1.02) translate(-5px, -11px) !important;
+  -ms-transform: scale(1.02) translate(-5px, -11px) !important;
+  transform: scale(1.02) translate(-5px, -11px) !important;
 }
 .land.activeLand:nth-child(5) {
-  @media screen and (min-width: 500px) {
-    -webkit-transform: scale(1.02) translate(-1%, -2%) !important;
-    -ms-transform: scale(1.02) translate(-1%, -2%) !important;
-    transform: scale(1.02) translate(-1%, -2%) !important;
-  }
+  -webkit-transform: scale(1.02) translate(-1%, -2%) !important;
+  -ms-transform: scale(1.02) translate(-1%, -2%) !important;
+  transform: scale(1.02) translate(-1%, -2%) !important;
 }
 .land.activeLand:nth-child(6) {
-  @media screen and (min-width: 500px) {
-    -webkit-transform: scale(1.02) translate(-1%, -2%) !important;
-    -ms-transform: scale(1.02) translate(-1%, -2%) !important;
-    transform: scale(1.02) translate(-1%, -2%) !important;
-  }
+  -webkit-transform: scale(1.02) translate(-1%, -2%) !important;
+  -ms-transform: scale(1.02) translate(-1%, -2%) !important;
+  transform: scale(1.02) translate(-1%, -2%) !important;
 }
 .land.activeLand:nth-child(7) {
-  @media screen and (min-width: 500px) {
-    -webkit-transform: scale(1.02) translateX(-8px) translateY(-20px) !important;
-    -ms-transform: scale(1.02) translateX(-8px) translateY(-20px) !important;
-    transform: scale(1.02) translateX(-8px) translateY(-20px) !important;
-  }
+  -webkit-transform: scale(1.02) translateX(-8px) translateY(-20px) !important;
+  -ms-transform: scale(1.02) translateX(-8px) translateY(-20px) !important;
+  transform: scale(1.02) translateX(-8px) translateY(-20px) !important;
 }
 .land.activeLand:nth-child(8) {
-  @media screen and (min-width: 500px) {
-    -webkit-transform: scale(1.02) translate(-1%, -2%) !important;
-    -ms-transform: scale(1.02) translate(-1%, -2%) !important;
-    transform: scale(1.02) translate(-1%, -2%) !important;
-  }
+  -webkit-transform: scale(1.02) translate(-1%, -2%) !important;
+  -ms-transform: scale(1.02) translate(-1%, -2%) !important;
+  transform: scale(1.02) translate(-1%, -2%) !important;
 }
 .land.activeLand:nth-child(9) {
-  @media screen and (min-width: 500px) {
-    -webkit-transform: scale(1.02) translate(-1%, -2%) !important;
-    -ms-transform: scale(1.02) translate(-1%, -2%) !important;
-    transform: scale(1.02) translate(-1%, -2%) !important;
-  }
+  -webkit-transform: scale(1.02) translate(-1%, -2%) !important;
+  -ms-transform: scale(1.02) translate(-1%, -2%) !important;
+  transform: scale(1.02) translate(-1%, -2%) !important;
 }
 .land.activeLand:nth-child(10) {
-  @media screen and (min-width: 500px) {
-    -webkit-transform: scale(1.2) translate(-66px, -119px) !important;
-    -ms-transform: scale(1.2) translate(-66px, -119px) !important;
-    transform: scale(1.2) translate(-66px, -119px) !important;
-  }
+  -webkit-transform: scale(1.2) translate(-66px, -119px) !important;
+  -ms-transform: scale(1.2) translate(-66px, -119px) !important;
+  transform: scale(1.2) translate(-66px, -119px) !important;
 }
 .land.activeLand:nth-child(11) {
-  @media screen and (min-width: 500px) {
-    -webkit-transform: scale(1.02) translate(-7px, -14px) !important;
-    -ms-transform: scale(1.02) translate(-7px, -14px) !important;
-    transform: scale(1.02) translate(-7px, -14px) !important;
-  }
+  -webkit-transform: scale(1.02) translate(-7px, -14px) !important;
+  -ms-transform: scale(1.02) translate(-7px, -14px) !important;
+  transform: scale(1.02) translate(-7px, -14px) !important;
 }
 .land.activeLand:nth-child(12) {
-  @media screen and (min-width: 500px) {
-    -webkit-transform: scale(1.02) translate(-1%, -2%) !important;
-    -ms-transform: scale(1.02) translate(-1%, -2%) !important;
-    transform: scale(1.02) translate(-1%, -2%) !important;
-  }
+  -webkit-transform: scale(1.02) translate(-1%, -2%) !important;
+  -ms-transform: scale(1.02) translate(-1%, -2%) !important;
+  transform: scale(1.02) translate(-1%, -2%) !important;
 }
 .land.activeLand:nth-child(13) {
-  @media screen and (min-width: 500px) {
-    -webkit-transform: scale(1.02) translate(-1%, -2%) !important;
-    -ms-transform: scale(1.02) translate(-1%, -2%) !important;
-    transform: scale(1.02) translate(-1%, -2%) !important;
-  }
+  -webkit-transform: scale(1.02) translate(-1%, -2%) !important;
+  -ms-transform: scale(1.02) translate(-1%, -2%) !important;
+  transform: scale(1.02) translate(-1%, -2%) !important;
 }
 
 .land:hover,
 .land:focus {
-  stroke-width: 0.5;
-  stroke-miterlimit: 3.97446823;
+  // stroke-width: 0.5;
+  // stroke-miterlimit: 3.97446823;
 
-  z-index: 222 !important;
+  // z-index: 222 !important;
 }
 
 // .animate:nth-child(1),
@@ -630,7 +628,7 @@ foreignObject {
 }
 
 .city-name svg {
-  top: 94% !important;
+  top: 88% !important;
   position: absolute;
   height: 10.33px;
   width: 29.22px;
