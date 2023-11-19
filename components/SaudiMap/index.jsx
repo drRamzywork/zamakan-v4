@@ -41,10 +41,8 @@ const SaudiMap = ({ }) => {
           zoomOut={{ step: 100 }}
           centerOnInit={false}
           minScale={0.5}
-          maxScale={1}
+          maxScale={1.4}
           initialScale={1}
-          wrapperStyle={{ maxWidth: '100%', maxHeight: 'calc(100vh - 50px)' }}
-          // state={stateObj}
           doubleClick={{ disabled: false, mode: "reset" }}
 
         >
@@ -65,6 +63,7 @@ const SaudiMap = ({ }) => {
                   });
 
                 }}>Reset</button>
+
 
 
 

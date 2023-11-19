@@ -66,13 +66,13 @@ export const MapContextProvider = ({ children }) => {
   }, []);
 
   const transformComponentRef = useRef(null);
-  const handleZoomToLand = (landIndex) => {
-    const elementId = `land-${landIndex}`;
+  const handleZoomToLand = (index) => {
+    const elementId = `land-${index}`;
     if (transformComponentRef.current) {
       const { zoomToElement } = transformComponentRef.current;
       zoomToElement(elementId);
     }
-    setActiveIndex(landIndex); // Set the active index
+    setActiveIndex(index); // Set the active index
     seIsPointsActive(false);
   };
 

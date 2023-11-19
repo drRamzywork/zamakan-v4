@@ -37,7 +37,16 @@ const Effra = localFont({
 })
 
 const LiteraryEras = () => {
-  const { smallMap } = imgs
+  const { smallMap,
+    SaudiMap,
+    adag,
+    bari,
+    madiinah,
+    makkah,
+    qassim,
+    salaan,
+    tabuuk,
+  } = imgs
 
 
   const {
@@ -50,6 +59,32 @@ const LiteraryEras = () => {
     handleZoomToLand, } = useMapContext();
 
 
+  const landData = [
+    { name: 'الرياض', image: smallMap },
+    { name: 'مكة المكرمة', image: makkah },
+    { name: 'المدينة المنورة', image: madiinah },
+    { name: 'الشرقية', image: bari },
+    { name: 'القصيم', image: qassim },
+    { name: 'عسير', image: adag },
+    { name: 'حائل', image: salaan },
+    { name: 'تبوك', image: tabuuk },
+    { name: 'الرياض', image: smallMap },
+    { name: 'مكة المكرمة', image: makkah },
+    { name: 'المدينة المنورة', image: madiinah },
+    { name: 'الشرقية', image: bari },
+    { name: 'القصيم', image: qassim },
+    { name: 'عسير', image: adag },
+    { name: 'حائل', image: salaan },
+    { name: 'تبوك', image: tabuuk },
+    { name: 'الرياض', image: smallMap },
+    { name: 'مكة المكرمة', image: makkah },
+    { name: 'المدينة المنورة', image: madiinah },
+    { name: 'الشرقية', image: bari },
+    { name: 'القصيم', image: qassim },
+    { name: 'عسير', image: adag },
+    { name: 'حائل', image: salaan },
+    { name: 'تبوك', image: tabuuk },
+  ];
 
 
   return (
@@ -111,7 +146,7 @@ const LiteraryEras = () => {
                 }} >
 
                   <div className={styles.img_container}>
-                    <img src={smallMap.src} alt='المملكة' />
+                    <img src={SaudiMap.src} alt='المملكة' />
                   </div>
 
                   <div className={styles.name}>
@@ -125,15 +160,14 @@ const LiteraryEras = () => {
                 <SwiperSlide>
                   <div className={`${styles.slider} ${index === activeIndex ? styles.active : ''}`} key={index} onClick={() => handleZoomToLand(index)}>
                     <div className={styles.img_container}>
-                      <img src={smallMap.src} alt='المملكة' />
+                      <img src={landData[index]?.image.src} alt='المملكة' />
                     </div>
                     <div className={styles.name}>
-                      <Typography>الرياض </Typography>
+                      <Typography>{landData[index]?.name}</Typography>
                     </div>
                   </div>
                 </SwiperSlide>
               ))}
-
             </Swiper>
 
 
