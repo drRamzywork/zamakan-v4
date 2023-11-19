@@ -243,8 +243,8 @@ body::-webkit-scrollbar-track {
   margin-top: -200px !important;
 
   @media screen and (max-width: 450px) {
-    border: 1px solid var(--main-blue-color);
-    border-radius: 5px;
+    // border: 1px solid var(--main-blue-color);
+    // border-radius: 5px;
   }
 
   @media screen and (max-width: 992px) {
@@ -266,7 +266,6 @@ body::-webkit-scrollbar-track {
   width: 100%;
 
   overflow: hidden;
-  border: 1px solid red;
 
   @media screen and (max-width: 450px) {
     // margin-top: 24px !important
@@ -285,8 +284,10 @@ body::-webkit-scrollbar-track {
 .react-transform-component {
   // width: 100% !important;
   // max-width: 100%;
-  @media screen and (max-width: 450px) {
-    transform: translate(379px, 15px) scale(0.6) !important;
+  #svg1 {
+    @media screen and (max-width: 450px) {
+      transform: translate(220px, -124px) scale(0.6) !important;
+    }
   }
 }
 
@@ -300,8 +301,8 @@ body::-webkit-scrollbar-track {
 }
 @media screen and (max-width: 450px) {
   .react-transform-wrapper {
-    border: 1px solid var(--main-blue-color);
-    border-radius: 5px;
+    // border: 1px solid var(--main-blue-color);
+    // border-radius: 5px;
   }
 }
 

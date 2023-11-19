@@ -81,15 +81,39 @@ const SaudiMap = () => {
 
 
   const transformComponentRef = useRef(null);
+  // const handleZoomToLand = (landIndex) => {
+  //   const elementId = `land-${landIndex}`;
+  //   if (transformComponentRef.current) {
+  //     const { zoomToElement } = transformComponentRef.current;
+  //     zoomToElement(elementId);
+
+  //   }
+  //   setActiveIndex(landIndex); // Set the active index
+  //   seIsPointsActive(false)
+  // };
+
   const handleZoomToLand = (landIndex) => {
     const elementId = `land-${landIndex}`;
-    if (transformComponentRef.current) {
-      const { zoomToElement } = transformComponentRef.current;
-      zoomToElement(elementId);
+    const targetElement = document.getElementById(elementId);
+    if (transformComponentRef.current && targetElement) {
+      const { setTransform } = transformComponentRef.current;
+
+      // Calculate the center coordinates of the target element
+      const targetX = targetElement.getBoundingClientRect().left + targetElement.offsetWidth / 2;
+      const targetY = targetElement.getBoundingClientRect().top + targetElement.offsetHeight / 2;
+
+      // Set the new transformation to zoom to the target element
+      setTransform({
+        scale: 2, // Adjust the scale factor as needed
+        positionX: window.innerWidth / 2 - targetX * 2, // Center the target element horizontally
+        positionY: window.innerHeight / 2 - targetY * 2, // Center the target element vertically
+      });
     }
-    setActiveIndex(landIndex); // Set the active index
-    seIsPointsActive(false)
+
+    setActiveIndex(landIndex);
+    seIsPointsActive(false);
   };
+
 
 
   useEffect(() => {
@@ -199,10 +223,7 @@ const SaudiMap = () => {
                 ))}
               </div>
 
-              <TransformComponent>
-                <Svg />
-
-              </TransformComponent>
+              <Svg />
             </>
           )}
         </TransformWrapper >
