@@ -285,6 +285,9 @@ body::-webkit-scrollbar-track {
 .react-transform-component {
   // width: 100% !important;
   // max-width: 100%;
+  @media screen and (max-width: 450px) {
+    transform: translate(379px, 15px) scale(0.6) !important;
+  }
 }
 
 @media screen and (max-width: 992px) {
