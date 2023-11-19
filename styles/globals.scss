@@ -282,8 +282,6 @@ body::-webkit-scrollbar-track {
   }
 }
 .react-transform-component {
-  // width: 100% !important;
-  // max-width: 100%;
   #svg1 {
     @media screen and (max-width: 450px) {
       transform: translate(220px, -124px) scale(0.6) !important;
