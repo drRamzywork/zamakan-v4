@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import styles from './index.module.scss'
-import { CssBaseline, useScrollTrigger, Slide, AppBar, Toolbar, Button, Container } from '@mui/material';
+import { CssBaseline, useScrollTrigger, Slide, AppBar, Toolbar, Button, Container, Typography } from '@mui/material';
 import { burgerIcon, Logo, Rectangle, Search } from '../../assets/svgsComponents';
 
 import localFont from 'next/font/local'
@@ -46,12 +46,13 @@ const Navbar = (props) => {
       </Slide>
     );
   }
-
   return (
     <>
 
       <main style={...Effra.style} dir='rtl'>
-        <AppBar style={{ background: '#F6F8FC' }} elevation={0} >
+        <AppBar style={{
+          background: ` #f6f8fc`
+        }} elevation={0} >
 
           <Container sx={{ maxWidth: "1400px" }} maxWidth={false}>
             <div className={styles.sec_container}
@@ -74,6 +75,12 @@ const Navbar = (props) => {
                   <Search />
                 </Button>
 
+                <Button className={styles.lang}>
+                  <Typography>
+                    EN
+                  </Typography>
+                </Button>
+
                 <div className={styles.btn_container}>
                   <Button>استكشف الشعراء</Button>
                 </div>
@@ -83,7 +90,7 @@ const Navbar = (props) => {
           </Container>
         </AppBar>
         <Toolbar />
-      </main>
+      </main >
     </>
   );
 };

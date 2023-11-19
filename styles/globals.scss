@@ -19,9 +19,11 @@
 
 html,
 body {
-  // max-width: 100vw;
-  // overflow-x: hidden;
-  background-color: #f6f8fc;
+  max-width: 100vw;
+  overflow-x: hidden;
+  // background-color: #f6f8fc;
+
+  background: #f6f8fc;
 }
 
 body {
@@ -35,7 +37,8 @@ a {
 }
 
 // global styles
-section {
+section,
+div {
   h3 {
     margin-bottom: 24px;
     font-family: var(--effra-font) !important;
@@ -154,139 +157,25 @@ body::-webkit-scrollbar-track {
 }
 
 // Map styles
-.tools {
-  display: flex;
-  flex-wrap: wrap;
-  margin-bottom: 16px;
-  button {
-    margin: 5px;
-    padding: 12px;
-    background-color: var(--main-beige-color);
-    color: var(--main-blue-color);
-    cursor: pointer;
-    border-radius: 5px;
-    border: none;
-    font-size: 16px;
-    font-weight: bold;
-    margin-bottom: 22px;
-  }
-}
-
 #map-boxes {
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
-  @media screen and (max-width: 992px) {
-    flex-direction: column;
-  }
-
-  .tools {
-    width: 501px;
-    max-height: 300px;
-    overflow-y: auto;
-    margin-top: 23px;
-    padding-left: 10px;
-
-    .box {
-      transition: all 0.3s ease-in-out;
-      display: flex;
-      align-items: center;
-      width: 100%;
-      height: 56px !important;
-      cursor: pointer;
-      border-radius: 10px 0px 0px 10px;
-      margin-bottom: 5px;
-      padding-right: 30px;
-
-      .img_container {
-        margin-left: 10px;
-        width: 44px;
-        height: 37px;
-
-        img {
-          width: 100%;
-          height: 100%;
-        }
-      }
-
-      .name {
-        p {
-          font-family: var(--effra-font);
-          font-size: 20px;
-          font-weight: var(--effra-Md);
-          color: var(--main-blue-color);
-        }
-      }
-
-      &:hover {
-        background-color: #faf4f3;
-      }
-    }
-
-    .box.active {
-      background-color: #faf4f3;
-      border-right: 3px solid var(--main-red-color);
-      height: 100%;
-
-      .name {
-        p {
-          color: var(--main-red-color);
-        }
-      }
-    }
-  }
-}
-
-.react-transform-wrapper {
-  // width: 695.43px !important;
-  // height: 100% !important;
-  margin-top: -200px !important;
-
-  @media screen and (max-width: 450px) {
-    // border: 1px solid var(--main-blue-color);
-    // border-radius: 5px;
-  }
-
+  width: 650.25px !important;
+  // height: 544.26px !important;
+  position: relative;
+  z-index: -22;
+  margin-top: -100px !important;
   @media screen and (max-width: 992px) {
     width: 100% !important;
-    margin-top: 24px !important;
-    margin-bottom: 24px !important;
   }
-
+}
+.react-transform-wrapper {
   #svg1 {
-    // width: 100% !important;
-
-    // height: 100% !important;
+    width: 100% !important;
+    height: 100% !important;
   }
 }
 
-.map-box {
-  margin-top: -200px !important;
-  position: relative;
-  width: 100%;
-
-  overflow: hidden;
-
-  @media screen and (max-width: 450px) {
-    // margin-top: 24px !important
-    margin-top: 146px !important;
-    margin-bottom: 24px !important;
-
-    overflow: unset !important;
-    #svg1 {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%) scale(0.5);
-    }
-  }
-}
 .react-transform-component {
-  #svg1 {
-    @media screen and (max-width: 450px) {
-      transform: translate(220px, -124px) scale(0.6) !important;
-    }
-  }
+  width: 100% !important;
 }
 
 @media screen and (max-width: 992px) {
@@ -313,11 +202,9 @@ body::-webkit-scrollbar-track {
   transition: transform 0.5s;
   transition: transform 0.5s, -webkit-transform 0.5s;
 }
-#svg1 {
-  // max-width: 100% !important;
-  // height: auto !important;
-}
+
 .city-name {
+  display: none !important;
   -webkit-transition: -webkit-transform 0.3s ease-in-out !important;
   transition: -webkit-transform 0.3s ease-in-out !important;
   -o-transition: transform 0.3s ease-in-out !important;
@@ -634,4 +521,20 @@ foreignObject {
   position: absolute;
   height: 10.33px;
   width: 29.22px;
+}
+
+// Swiper styles
+.mySwiper {
+  min-height: 150px;
+
+  .swiper-scrollbar {
+    background-color: var(--main-blue-color) !important;
+    opacity: 1 !important;
+    .swiper-scrollbar-drag {
+      background-color: var(--main-beige-color) !important;
+    }
+  }
+}
+.swiper-horizontal {
+  overflow: unset !important;
 }

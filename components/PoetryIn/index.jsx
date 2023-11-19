@@ -32,77 +32,131 @@ const Effra = localFont({
 })
 
 const PoetryIn = () => {
-  const [isLoadMoreActive, setIsLoadMoreActive] = useState(false)
-
   const [activeLand, setActiveLand] = useState(null);
+  const { ra3y } = imgs;
 
-  const handlePClick = (landIndex) => {
-    setActiveLand(landIndex);
-  };
 
 
 
 
   return (
-    <section dir='rtl' id='PoetryIn' className={styles.PoetryIn} style={...Effra.style}>
+    <div dir='rtl' id='PoetryIn' className={styles.PoetryIn} style={...Effra.style}>
       <Container sx={{ maxWidth: "1400px" }} maxWidth={false}>
         <div className={styles.sec_container} >
 
           <div className={styles.text_container}>
             <div className={styles.sec_title}>
               <Typography variant='h3'>
-                الشعر في العصر الأموي ٦٦٣-٧٥٠ م
+                أبرز ما قيل في المملكة
               </Typography>
             </div>
             <div className={styles.sec_info}>
-              <Typography>
-                من أكثر عصور الشعر ازدهاراً، إذ تمازج صفاء السليقة العربية مع بيئات جديدة كالشام والعراق ومصر وخراسان مما جعل هذا الأدب يتلون بألوان هذه البيئات المتنوعة، فيثمر إبداعاً عربياً ثرياً في المقاصد والتوجهات، وكان لاهتمام الخلفاء الأمويين تأثير عظيم في تجويد الشعر..
-              </Typography>
-
-              {isLoadMoreActive &&
-                <>
+              <div className={styles.inner_info}>
+                <div className={styles.tag}>
+                  <Typography>المملكة</Typography>
+                </div>
+                <div className={styles.desc}>
                   <Typography>
-                    من أكثر عصور الشعر ازدهاراً، إذ تمازج صفاء السليقة العربية مع بيئات جديدة كالشام والعراق ومصر وخراسان مما جعل هذا الأدب يتلون بألوان هذه البيئات المتنوعة، فيثمر إبداعاً عربياً ثرياً في المقاصد والتوجهات، وكان لاهتمام الخلفاء الأمويين تأثير عظيم في تجويد الشعر..
+                    مقـــــيم على
+                    {` `}
+                    <span>
+                      بنبــــــان
+                    </span>
+                    {` `}
+                    يمنــــع مـــــاءه
+                    وماء وشيع ماء عطشان مرمل
                   </Typography>
-                  <Typography>
-                    من أكثر عصور الشعر ازدهاراً، إذ تمازج صفاء السليقة العربية مع بيئات جديدة كالشام والعراق ومصر وخراسان مما جعل هذا الأدب يتلون بألوان هذه البيئات المتنوعة، فيثمر إبداعاً عربياً ثرياً في المقاصد والتوجهات، وكان لاهتمام الخلفاء الأمويين تأثير عظيم في تجويد الشعر..
-                  </Typography>
-                </>
-              }
+                </div>
+                <hr />
+                <div className={styles.poet_info}>
+                  <div className={styles.img_container}>
+                    <img src={ra3y.src} alt="" />
+                  </div>
+
+                  <div className={styles.text_container}>
+                    <div className={styles.name}>
+                      <Typography>الراعي</Typography>
+                    </div>
+                    <div className={styles.tag}>
+                      <Typography>
+                        العصر الأموي
+                      </Typography>
+
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
 
-            <div className={styles.more_btn}>
-              <Button onClick={() => setIsLoadMoreActive((prev) => !prev)}>
-                {isLoadMoreActive ?
-                  <>
-                    اقرأ أقل
-                  </>
-                  :
-                  <>
-                    اقرأ
-                    المزيد
-                  </>
-                }
+            <div className={styles.explore}>
 
-              </Button>
+              <div className={styles.sec_title}>
+                <Typography variant='h3'>
+                  مناطق الرياض
+                </Typography>
+              </div>
+
+              <div className={styles.tags_container}>
+                <Button onClick={() => router.push('/city')}>
+                  <p>
+                    بنبان
+                  </p>
+                </Button>
+
+                <Button onClick={() => router.push('/city')}>
+                  <p>
+                    حومل
+                  </p>
+                </Button>
+
+                <Button onClick={() => router.push('/city')}>
+                  <p>
+                    وجرة
+                  </p>
+                </Button>
+
+                <Button onClick={() => router.push('/city')}>
+                  <p>
+                    سقط اللوى
+                  </p>
+                </Button>
+
+                <Button onClick={() => router.push('/city')}>
+                  <p>
+                    الصفاح
+                  </p>
+                </Button>
+
+                <Button onClick={() => router.push('/city')}>
+                  <p>
+                    فيد
+                  </p>
+                </Button>
+
+                <Button onClick={() => router.push('/city')}>
+                  <p>
+                    العذيب
+                  </p>
+                </Button>
+              </div>
             </div>
 
 
-            <div className={styles.sec_title}>
-              <Typography variant='h3'>
-                مناطق المملكة
-              </Typography>
-            </div>
+
+
+
+
+
           </div>
+          <SaudiMap dir='ltr' activeLand={activeLand} />
 
         </div>
-        <SaudiMap dir='ltr' activeLand={activeLand} />
 
 
 
       </Container>
 
-    </section >
+    </div >
   )
 }
 
