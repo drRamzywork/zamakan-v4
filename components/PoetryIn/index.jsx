@@ -5,6 +5,7 @@ import { Button } from '@mui/base'
 import localFont from 'next/font/local'
 import imgs from '../../assets/constants/imgs';
 import SaudiMap from "@/components/SaudiMap";
+import Link from 'next/link'
 
 const Effra = localFont({
   src: [
@@ -97,46 +98,46 @@ const PoetryIn = () => {
               </div>
 
               <div className={styles.tags_container}>
-                <Button onClick={() => router.push('/city')}>
-                  <p>
+                <Button >
+                  <Link href='/city'>
                     بنبان
-                  </p>
+                  </Link>
                 </Button>
 
-                <Button onClick={() => router.push('/city')}>
-                  <p>
+                <Button >
+                  <Link href='/city'>
                     حومل
-                  </p>
+                  </Link>
                 </Button>
 
-                <Button onClick={() => router.push('/city')}>
-                  <p>
+                <Button >
+                  <Link href='/city'>
                     وجرة
-                  </p>
+                  </Link>
                 </Button>
 
-                <Button onClick={() => router.push('/city')}>
-                  <p>
+                <Button >
+                  <Link href='/city'>
                     سقط اللوى
-                  </p>
+                  </Link>
                 </Button>
 
-                <Button onClick={() => router.push('/city')}>
-                  <p>
+                <Button >
+                  <Link href='/city'>
                     الصفاح
-                  </p>
+                  </Link>
                 </Button>
 
-                <Button onClick={() => router.push('/city')}>
-                  <p>
+                <Button >
+                  <Link href='/city'>
                     فيد
-                  </p>
+                  </Link>
                 </Button>
 
-                <Button onClick={() => router.push('/city')}>
-                  <p>
+                <Button >
+                  <Link href='/city'>
                     العذيب
-                  </p>
+                  </Link>
                 </Button>
               </div>
             </div>
