@@ -8,6 +8,7 @@ import Poets from "@/components/Poets";
 import PoetryIn from "@/components/PoetryIn";
 import Svg from "@/components/SVGParts/Svg";
 import { Container } from "@mui/material";
+import Footer from "@/components/Footer";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -32,6 +33,7 @@ export default function Home() {
       <div className={styles.main}>
         <Navbar />
         <LiteraryEras />
+        <Footer />
       </div>
     </>
   );
