@@ -1,3 +1,4 @@
+import { useRouter } from "next/router";
 import React, {
   createContext,
   useState,
@@ -17,7 +18,7 @@ export const useMapContext = () => {
 // Create a provider component that will wrap your application
 export const MapContextProvider = ({ children }) => {
   const [someValue, setSomeValue] = useState("Default Value");
-
+  const router = useRouter();
   const updateValue = (newValue) => {
     setSomeValue(newValue);
   };
@@ -30,11 +31,11 @@ export const MapContextProvider = ({ children }) => {
   const containerRef = useRef(null);
   const handleClick = () => {
     // Navigate to the specified route
-    // router.push("/city");
+    router.push("/city");
   };
 
   useEffect(() => {
-    const elements = document.querySelectorAll(".city-name");
+    const elements = document.querySelectorAll(".land");
     const container = containerRef.current;
 
     elements.forEach((element) => {

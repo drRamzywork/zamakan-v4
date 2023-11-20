@@ -160,16 +160,20 @@ body::-webkit-scrollbar-track {
 #map-boxes {
   width: 650.25px !important;
   // height: 544.26px !important;
-  position: relative;
-  z-index: -22;
   margin-top: -50px !important;
   @media screen and (max-width: 992px) {
     width: 100% !important;
+  }
+
+  @media screen and (max-width: 450px) {
+    position: relative;
+    z-index: -122;
   }
 }
 .react-transform-wrapper {
   #svg1 {
     width: 100% !important;
+    cursor: grab;
     height: 100% !important;
   }
 }
@@ -218,7 +222,7 @@ body::-webkit-scrollbar-track {
   cursor: pointer;
   opacity: 1;
 }
-.city-name:hover {
+.hover-effect:hover {
   -webkit-transform: translateY(-5px) !important;
   -ms-transform: translateY(-5px) !important;
   transform: translateY(-5px) !important;
@@ -249,7 +253,7 @@ body::-webkit-scrollbar-track {
     //   display: none !important;
     // }
   }
-  .city-name {
+  .hover-effect {
     opacity: 0 !important;
   }
 }
@@ -261,7 +265,7 @@ body::-webkit-scrollbar-track {
     transition: stroke 0.5s ease-in-out !important;
   }
   &:hover {
-    path:not(.city-name svg path) {
+    path:not(.hover-effect svg path) {
       stroke-width: 2 !important;
       stroke: #ffffff !important;
     }
@@ -492,7 +496,7 @@ foreignObject {
 .city-container {
   overflow: unset !important;
 }
-.city-name {
+.hover-effect {
   background: #fff;
   color: #bb7165;
   font-size: 16px;
@@ -516,7 +520,7 @@ foreignObject {
   font-family: var(--effra-font) !important;
 }
 
-.city-name svg {
+.hover-effect svg {
   top: 88% !important;
   position: absolute;
   height: 10.33px;

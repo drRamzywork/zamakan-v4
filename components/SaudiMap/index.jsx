@@ -36,7 +36,6 @@ const SaudiMap = ({ }) => {
           transform={`translate(-98.2px, 19.8px) scale(0.8)`}
           ref={transformComponentRef}
           wheel={{ wheelDisabled: true }}
-          pan={{ disabled: false }}
           zoomIn={{ step: 100 }}
           zoomOut={{ step: 100 }}
           centerOnInit={false}
