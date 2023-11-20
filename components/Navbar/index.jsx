@@ -68,9 +68,9 @@ const Navbar = (props) => {
               </Button>
 
 
-              <a className={styles.logo} href={'/'}>
+              <Link className={styles.logo} href={'/'}>
                 <Logo />
-              </a>
+              </Link>
 
 
               <div className={styles.discover}>
