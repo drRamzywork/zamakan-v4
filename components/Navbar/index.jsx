@@ -63,6 +63,10 @@ const Navbar = (props) => {
                 </svg>
               </Button>
 
+              <Button className={styles.search_icon_mobile}>
+                <Search />
+              </Button>
+
 
               <Link className={styles.logo} href={'/'}>
                 <Logo />
