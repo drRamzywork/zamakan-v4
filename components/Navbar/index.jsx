@@ -80,9 +80,7 @@ const Navbar = (props) => {
                 </Button>
 
                 <Button className={styles.lang}>
-                  <Typography>
-                    EN
-                  </Typography>
+                  EN
                 </Button>
 
                 <div className={styles.btn_container}>
