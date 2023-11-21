@@ -585,6 +585,9 @@ foreignObject {
   &.swiper-button-disabled {
   }
 }
+.MuiTabs-root {
+  overflow: unset !important;
+}
 
 // Position the navigation buttons
 .swiperButtonPrev {
