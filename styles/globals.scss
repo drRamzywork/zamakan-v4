@@ -150,6 +150,12 @@ body::-webkit-scrollbar-track {
   padding-left: 0 !important;
   padding-right: 0 !important;
 }
+.MuiTabs-scroller {
+  overflow: unset !important;
+}
+.css-dfemhp-MuiTabs-root {
+  overflow: unset !important;
+}
 
 .disable_container_mobile {
   padding-left: 0 !important;
@@ -528,17 +534,109 @@ foreignObject {
 }
 
 // Swiper styles
-.mySwiper {
-  min-height: 150px;
 
-  .swiper-scrollbar {
-    background-color: var(--main-blue-color) !important;
-    opacity: 1 !important;
-    .swiper-scrollbar-drag {
-      background-color: var(--main-beige-color) !important;
+#LiteraryEras {
+  .mySwiper {
+    min-height: 150px;
+
+    .swiper-scrollbar {
+      background-color: var(--main-blue-color) !important;
+      opacity: 1 !important;
+      .swiper-scrollbar-drag {
+        background-color: var(--main-beige-color) !important;
+      }
     }
   }
+  .swiper-horizontal {
+    overflow: unset !important;
+  }
+  //
 }
+
+.MuiTabs-indicator {
+  display: none;
+}
+
 .swiper-horizontal {
-  overflow: unset !important;
+  // overflow: visible !important;
+}
+
+.swiper-slide {
+  height: 100% !important;
+}
+
+#swiperButton {
+  background-color: #372d40;
+  position: absolute;
+  z-index: 10;
+  bottom: 5%;
+  border-radius: 50%;
+  width: 28px;
+  height: 28px;
+  transition: all 0.3s ease-in-out;
+  display: flex;
+  cursor: pointer;
+  svg {
+    margin: auto;
+    color: var(--main-white-color);
+    width: 16px;
+    height: 16px;
+  }
+  &.swiper-button-disabled {
+  }
+}
+
+// Position the navigation buttons
+.swiperButtonPrev {
+  left: 46% !important;
+  @media screen and (max-width: 450px) {
+    left: 29% !important;
+  }
+}
+
+.swiperButtonNext {
+  right: 43.5% !important;
+  @media screen and (max-width: 450px) {
+    right: 20.5% !important;
+  }
+}
+
+#swiperContainer {
+  padding-bottom: 40px;
+
+  // Define the color of the navigation buttons
+
+  // Define the pagination bullet styles
+  .swiper-pagination-bullet {
+    width: auto;
+    height: auto;
+    background: #372d40;
+    color: #ffffff;
+    text-align: center;
+    line-height: 30px; // Adjust the height to match your design
+    font-size: 10px; // Adjust font size as needed
+    border-radius: 50%;
+    border-radius: 50%;
+    width: 28px;
+    height: 28px;
+    transition: all 0.3s ease-in-out;
+    font-family: var(--effra-font);
+    font-weight: 400;
+    opacity: 1;
+
+    &:hover {
+      background: #e6ddc6;
+      color: black;
+    }
+  }
+
+  .swiper-pagination {
+    // bottom: -24px !important;
+  }
+
+  // Style for the active pagination bullet
+  .swiper-pagination-bullet-active {
+    background: #e6ddc6;
+    color: #372d40;
+  }
 }

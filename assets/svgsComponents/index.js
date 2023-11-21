@@ -8,3 +8,5 @@ export { default as Instagram } from "./Instagram";
 export { default as LinkedIn } from "./LinkedIn";
 export { default as Youtube } from "./Youtube";
 export { default as Phone } from "./Phone";
+export { default as Profile } from "./Profile";
+export { default as Feather } from "./Feather";

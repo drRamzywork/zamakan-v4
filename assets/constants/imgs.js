@@ -14,7 +14,10 @@ import makkah from "../makkah.svg";
 import qassim from "../qassim.svg";
 import salaan from "../salaan.svg";
 import tabuuk from "../tabuuk.svg";
+import Feather from "../Feather.svg";
+import profile from "../profile.svg";
 import vision2030 from "../vision2030.png";
+import poet_details from "../poet_details.png";
 
 export default {
   burgerIcon,
@@ -33,4 +36,7 @@ export default {
   salaan,
   tabuuk,
   vision2030,
+  poet_details,
+  Feather,
+  profile,
 };

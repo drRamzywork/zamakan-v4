@@ -101,10 +101,12 @@
     cursor: pointer;
     width: 77.39px;
     height: 48.08px;
+    margin-right: 180px;
+
     @media screen and (max-width: 992px) {
       width: 37.22px;
       height: 23px;
-      margin-right: auto;
+      margin-right: auto !important;
       margin-left: 31px;
     }
 

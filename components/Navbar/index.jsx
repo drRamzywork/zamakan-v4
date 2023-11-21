@@ -146,44 +146,43 @@ const Navbar = (props) => {
                   />
                 </svg>
               </Button>
-
-              <motion.div
-                initial="closed"
-                animate={navMenu ? "open" : "closed"}
-                variants={variants}
-                transition={{ duration: 0.5, type: "tween" }}
-
-
-                className={styles.nav_menu_container}>
-                <div className={styles.links}>
-                  <div className={styles.link}>
-                    <Link href='/'>مناطق المملكة </Link>
+              {navMenu &&
+                <motion.div
+                  initial="closed"
+                  animate={navMenu ? "open" : "closed"}
+                  variants={variants}
+                  transition={{ duration: 0.5, type: "tween" }}
+                  className={styles.nav_menu_container}>
+                  <div className={styles.links}>
+                    <div className={styles.link}>
+                      <Link href='/'>مناطق المملكة </Link>
+                    </div>
+                    <div className={styles.link}>
+                      <Link href='/'>العصور الأدبية</Link>
+                    </div>
+                    <div className={styles.link}>
+                      <Link href='/'>الشعراء </Link>
+                    </div>
                   </div>
-                  <div className={styles.link}>
-                    <Link href='/'>العصور الأدبية</Link>
+                  <div className={styles.soical_links}>
+                    <Link href='https://www.twitter.com'>
+                      <Twitter />
+                    </Link>
+
+                    <Link href='https://www.instagram.com'>
+                      <Instagram />
+                    </Link>
+
+                    <Link href='https://www.linkedIn.com'>
+                      <LinkedIn />
+                    </Link>
+
+                    <Link href='https://www.youtube.com'>
+                      <Youtube />
+                    </Link>
                   </div>
-                  <div className={styles.link}>
-                    <Link href='/'>الشعراء </Link>
-                  </div>
-                </div>
-                <div className={styles.soical_links}>
-                  <Link href='https://www.twitter.com'>
-                    <Twitter />
-                  </Link>
-
-                  <Link href='https://www.instagram.com'>
-                    <Instagram />
-                  </Link>
-
-                  <Link href='https://www.linkedIn.com'>
-                    <LinkedIn />
-                  </Link>
-
-                  <Link href='https://www.youtube.com'>
-                    <Youtube />
-                  </Link>
-                </div>
-              </motion.div>
+                </motion.div>
+              }
 
               <Button className={styles.search_icon_mobile}>
                 <Search />

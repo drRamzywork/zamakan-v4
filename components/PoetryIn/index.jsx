@@ -146,8 +146,6 @@ const PoetryIn = () => {
 
 
 
-
-
           </div>
           <SaudiMap dir='ltr' activeLand={activeLand} />
 

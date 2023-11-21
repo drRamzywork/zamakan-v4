@@ -50,7 +50,7 @@ header#cities {
             align-items: center;
             justify-content: center;
 
-            &:not(:last-child):after {
+            &:not(:first-child):after {
               content: "";
               position: absolute;
               top: 50%;
