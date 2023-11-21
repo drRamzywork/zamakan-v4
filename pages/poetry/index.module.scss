@@ -1,0 +1,61 @@
+section#poetry_page {
+  .slider_container {
+    width: 100%;
+    border-radius: 163.5px 10px 0px 10px;
+    border: 1px solid #e5e6f2;
+    background-color: #ffffff;
+    margin-top: 30px;
+    .sec_title {
+      h3 {
+      }
+    }
+
+    .swiper_container {
+      overflow-y: unset;
+    }
+    .slider {
+      .box {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: row;
+        position: relative;
+        .img_container {
+          position: absolute;
+          left: 0;
+          top: 0;
+          img {
+          }
+        }
+
+        .text_container {
+          p {
+          }
+          span {
+          }
+          p:last-child {
+          }
+        }
+      }
+    }
+
+    .poet_info {
+      .img_container {
+        img {
+        }
+      }
+
+      .text_container {
+        .name {
+          p {
+          }
+        }
+        .tag {
+          p {
+          }
+        }
+      }
+    }
+  }
+}

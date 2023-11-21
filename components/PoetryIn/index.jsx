@@ -75,9 +75,9 @@ const PoetryIn = () => {
                   </div>
 
                   <div className={styles.text_container}>
-                    <div className={styles.name}>
+                    <Link href='/poet' className={styles.name}>
                       <Typography>الراعي</Typography>
-                    </div>
+                    </Link>
                     <div className={styles.tag}>
                       <Typography>
                         العصر الأموي

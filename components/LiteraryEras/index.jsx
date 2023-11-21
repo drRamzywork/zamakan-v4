@@ -57,7 +57,7 @@ const LiteraryEras = () => {
     seIsPointsActive,
     landElments,
     handleZoomToLand, } = useMapContext();
-
+  console.log(landElments, "landElments")
 
   const landData = [
     { name: 'الرياض', image: smallMap },
@@ -157,7 +157,7 @@ const LiteraryEras = () => {
               </SwiperSlide>
 
               {Array.from({ length: landElments.length }).map((_, index) => (
-                <SwiperSlide>
+                <SwiperSlide key={index}>
                   <div className={`${styles.slider} ${index === activeIndex ? styles.active : ''}`} key={index} onClick={() => handleZoomToLand(index)}>
                     <div className={styles.img_container}>
                       <img src={landData[index]?.image.src} alt='المملكة' />

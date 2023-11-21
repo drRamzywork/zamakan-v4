@@ -16,8 +16,10 @@ import salaan from "../salaan.svg";
 import tabuuk from "../tabuuk.svg";
 import Feather from "../Feather.svg";
 import profile from "../profile.svg";
+import Feather_big from "../Feather_big.svg";
 import vision2030 from "../vision2030.png";
 import poet_details from "../poet_details.png";
+import place from "../place.png";
 
 export default {
   burgerIcon,
@@ -39,4 +41,6 @@ export default {
   poet_details,
   Feather,
   profile,
+  Feather_big,
+  place,
 };
