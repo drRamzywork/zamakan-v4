@@ -34,7 +34,6 @@ const Poetry = () => {
                   nextEl: nextRef.current,
                 }}
                 onSwiper={(swiper) => {
-                  // Link swiper's internal navigation to the custom buttons
                   swiper.params.navigation.prevEl = prevRef.current;
                   swiper.params.navigation.nextEl = nextRef.current;
                   swiper.navigation.init();

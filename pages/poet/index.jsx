@@ -40,7 +40,7 @@ export default function Poet() {
     borderRadius: '30px',
     marginRight: '0 !important',
     '@media (max-width: 600px)': {
-      width: '160px',
+      width: '140px',
       marginTop: '0',
       padding: '10px',
       paddingRight: '26px',
@@ -184,6 +184,7 @@ export default function Poet() {
               </div>} label="عن الشاعر"
               id='about'
             />
+
 
 
             <Tab
