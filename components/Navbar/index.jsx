@@ -161,7 +161,7 @@ const Navbar = (props) => {
                       <Link href='/'>العصور الأدبية</Link>
                     </div>
                     <div className={styles.link}>
-                      <Link href='/'>الشعراء </Link>
+                      <Link href='/poets'>الشعراء </Link>
                     </div>
                   </div>
                   <div className={styles.soical_links}>

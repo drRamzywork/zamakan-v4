@@ -512,9 +512,11 @@ foreignObject {
   height: 10.33px;
   width: 29.22px;
 }
+.MuiTabs-root {
+  overflow: unset !important;
+}
 
 // Swiper styles
-
 #LiteraryEras {
   .mySwiper {
     min-height: 150px;
@@ -532,13 +534,14 @@ foreignObject {
   }
   //
 }
+#simlar_poets {
+  .swiper {
+    overflow: unset;
+  }
+}
 
 .MuiTabs-indicator {
   display: none;
-}
-
-.swiper-horizontal {
-  // overflow: visible !important;
 }
 
 .swiper-slide {
@@ -564,9 +567,6 @@ foreignObject {
   }
   &.swiper-button-disabled {
   }
-}
-.MuiTabs-root {
-  overflow: unset !important;
 }
 
 // Position the navigation buttons
@@ -623,6 +623,14 @@ foreignObject {
     color: #372d40;
   }
 }
+
+//
+#poetry_page {
+  .swiper-button-disabled {
+    opacity: 0.5;
+  }
+}
+//
 
 //poet Page
 .css-kmp8xz-MuiSelect-icon {

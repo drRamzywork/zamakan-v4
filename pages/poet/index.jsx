@@ -185,8 +185,6 @@ export default function Poet() {
               id='about'
             />
 
-
-
             <Tab
               id='poets-btn'
               disableRipple
@@ -214,68 +212,68 @@ export default function Poet() {
 
                     <div className={styles.box}>
                       <div className={styles.title}>
-                        <Typography >الاسم السابق</Typography>
+                        <Typography >الاسم </Typography>
                       </div>
                       <div className={styles.name}>
-                        <Typography>وجرة</Typography>
+                        <Typography>ميمون بن قيس </Typography>
                       </div>
                     </div>
                     <div className={styles.box}>
                       <div className={styles.title}>
-                        <Typography>الاسم الحالي</Typography>
+                        <Typography>اللقب</Typography>
                       </div>
                       <div className={styles.name}>
-                        <Typography>ركبه</Typography>
+                        <Typography>الأعشى</Typography>
                       </div>
                     </div>
                     <div className={styles.box}>
                       <div className={styles.title}>
-                        <Typography>أسماء أخرى</Typography>
+                        <Typography>سبب اللقب</Typography>
                       </div>
                       <div className={styles.name}>
-                        <Typography>سهل ركبه</Typography>
+                        <Typography>لضعف بصره</Typography>
                       </div>
                     </div>
                     <div className={styles.box}>
                       <div className={styles.title}>
-                        <Typography>المنطقة الإدراية</Typography>
+                        <Typography>تاريخ الميلاد</Typography>
                       </div>
                       <div className={styles.name}>
-                        <Typography>مكة المكرمة</Typography>
+                        <Typography>23 هـجريًا - 644 ميلاديًا</Typography>
                       </div>
                     </div>
                     <div className={styles.box}>
                       <div className={styles.title}>
-                        <Typography>قيمة المكان</Typography>
+                        <Typography>محل الميلاد</Typography>
                       </div>
                       <div className={styles.name}>
-                        <Typography>مكان مناسب قديمًا للرعي لوفرة مائه وأشجاره</Typography>
-                      </div>
-                    </div>
-
-                    <div className={styles.box}>
-                      <div className={styles.title}>
-                        <Typography>وصف المكان قديمًا</Typography>
-                      </div>
-                      <div className={styles.name}>
-                        <Typography>مكان مناسب قديمًا للرعي لوفرة مائه وأشجاره</Typography>
+                        <Typography>المدينة المنورة</Typography>
                       </div>
                     </div>
 
                     <div className={styles.box}>
                       <div className={styles.title}>
-                        <Typography>وصف المكان حديثًا</Typography>
+                        <Typography>تاريخ الوفاة</Typography>
                       </div>
                       <div className={styles.name}>
-                        <Typography>غير موجود وهو ضمن سهل ركبة</Typography>
+                        <Typography>105 هـجريًا - 723 ميلاديًا</Typography>
+                      </div>
+                    </div>
+
+                    <div className={styles.box}>
+                      <div className={styles.title}>
+                        <Typography>محل الوفاة</Typography>
+                      </div>
+                      <div className={styles.name}>
+                        <Typography>المدينة المنورة</Typography>
                       </div>
                     </div>
                     <div className={styles.box}>
                       <div className={styles.title}>
-                        <Typography>الموقع</Typography>
+                        <Typography>عمره عند الوفاة</Typography>
                       </div>
                       <div className={styles.name}>
-                        <Typography>شمال الطائف</Typography>
+                        <Typography>79 عام</Typography>
                       </div>
                     </div>
 
@@ -386,9 +384,7 @@ export default function Poet() {
 
                   </div>
                   <div className="slider">
-
                     <SliderVerses />
-
                   </div>
                 </div>
               </section>

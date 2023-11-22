@@ -10,3 +10,8 @@ export { default as Youtube } from "./Youtube";
 export { default as Phone } from "./Phone";
 export { default as Profile } from "./Profile";
 export { default as Feather } from "./Feather";
+export { default as LeftArrow } from "./LeftArrow";
+export { default as RightArrow } from "./RightArrow";
+export { default as Check } from "./Check";
+export { default as Checked } from "./Checked";
+export { default as Location } from "./Location";
